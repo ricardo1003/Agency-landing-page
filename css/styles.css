@@ -19,5 +19,79 @@ picture :first-child{
     display: none;
 }
 
+header{
+    position: fixed;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header aside{
+    height: 36px;
+}
+.menuButton{
+    width: 2em;
+    aspect-ratio: 1/1;
+    display: block;
+    background: url("../images/menu-1-svgrepo-com.svg");
+    background-position: center;
+    background-size: contain;
+    filter: brightness(0) invert();
+    -webkit-filter: brightness(0) invert();
+}
+#openMenu{
+    width: 0;
+    height: 0;
+}
+.menu{
+    display: none;
+}
+#openMenu:checked ~ .menu{
+    margin: 0 1.5em;
+    padding: 2em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    background-color: #fff;
+    font-family: "Barlow";
+    font-weight: 600;
+}
+#openMenu:checked ~ .menu::before{
+    content: "";
+    display: block;
+    width: 40px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: -39px;
+    right: 0;
+    background-color: inherit;
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+#openMenu:checked ~ .menu a{
+    color: hsl(213, 9%, 39%);
+}
+#openMenu:checked ~ .menu li:last-of-type a{
+    width: 100%;
+    height: 100%;
+    padding: 1em 2em;
+    display: block;
+    text-align: center;
+    border-radius: 100px;
+    background-color: hsl(51, 100%, 49%);
+    color: black;
+    font-family: "Fraunces";
+
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}  
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
