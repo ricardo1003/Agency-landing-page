@@ -166,7 +166,33 @@ h1{
     background-color: hsla(7, 99%, 70%, 0.25);
 }
 
-
+.aditionalInfo{
+    display: grid;
+}
+.aditionalInfo section{
+    padding: 22em 1.5em 3em;
+    text-align: center;
+    background: url("../images/mobile/image-graphic-design.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    color: hsl(167, 40%, 24%);
+}
+.aditionalInfo > :last-child{
+    background: url("../images/mobile/image-photography.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    color: hsl(198, 62%, 26%);
+}
+h3{
+    font-weight: 900;
+    font-size: 1.5em;
+}
+.aditionalInfo section p{
+    margin: 1em 0;
+    font-weight: 600;
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
