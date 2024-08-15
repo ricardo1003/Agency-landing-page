@@ -21,11 +21,13 @@ picture :first-child{
 
 header{
     position: fixed;
+    z-index: 5;
     width: 100%;
     padding: 1em;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    backdrop-filter: blur(5px) invert(0.1);
 }
 header aside{
     height: 36px;
@@ -92,6 +94,38 @@ header aside{
     -ms-border-radius: 100px;
     -o-border-radius: 100px;
 }  
+
+.title{
+    /* min-height: 27.5em; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #3DBEFF;
+}
+h1{
+    position: absolute;
+    top: 25%;
+    color: white;
+    font-size: 2.5em;
+    letter-spacing: 5px;
+    z-index: 1;
+}
+.title > img{
+    bottom: 30%;
+    position: absolute;
+}
+.title picture{
+    margin-bottom: -5px;
+}
+.title picture img{
+    /* top: 70px; */
+    /* position: absolute; */
+    /* z-index: 0; */
+}
+
+
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
