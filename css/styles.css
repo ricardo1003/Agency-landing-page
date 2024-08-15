@@ -242,6 +242,37 @@ h3{
     height: 100%;
 }
 
+footer{
+    padding: 2em 1em;
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(167, 44%, 70%);
+}
+footer > img{
+    height: 1.75em;
+}
+footer aside{
+    max-width: 400px;
+    width: 100%;
+}
+footer aside ul, footer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer aside ul a{
+    font-family: "Barlow";
+    font-weight: 600;
+    color: hsl(167, 40%, 24%);
+}
+footer> ul{
+    margin-top: 2em;
+    gap: 20px;
+}
+
+
 .testimonial img, #openMenu:checked ~ .menu li:last-of-type a{
     border-radius: 100px;
     -webkit-border-radius: 100px;
@@ -249,5 +280,6 @@ h3{
     -ms-border-radius: 100px;
     -o-border-radius: 100px;
 }
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 11px; text-align: center; position: fixed;
+bottom: 0; right: 0; left: 0; font-family: "Barlow"; backdrop-filter: blur(3px);}
 .attribution a { color: hsl(228, 45%, 44%); }
