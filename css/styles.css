@@ -84,15 +84,9 @@ header aside{
     padding: 1em 2em;
     display: block;
     text-align: center;
-    border-radius: 100px;
     background-color: hsl(51, 100%, 49%);
     color: black;
     font-family: "Fraunces";
-
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    -o-border-radius: 100px;
 }  
 
 .title{
@@ -191,8 +185,62 @@ h3{
 }
 .aditionalInfo section p{
     margin: 1em 0;
+    font-family: "Barlow";
     font-weight: 600;
 }
 
+.testimonials{
+    padding: 2em 0;
+    text-align: center;
+}
+.testimonials h2{
+    color: hsl(232, 10%, 55%);
+    font-size: 1.125em;
+    letter-spacing: 5px;
+}
+.testimonials section{
+    padding: 1.5em;
+    display: grid;
+    gap: 2.5em;
+}
+.testimonial{
+    display: flex;
+    gap: 1.5em;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: "Barlow";
+}
+.testimonial img{
+    height: 3.5em;
+    aspect-ratio: 1/1
+}
+.testimonial blockquote{
+    color: hsl(213, 9%, 39%);
+    font-weight: 600;
+}
+.testimonial p{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    font-size: 0.75em;
+    font-weight: 600;
+    color: hsl(232, 10%, 55%);
+}
+.testimonial p strong{
+    font-size: 1.5em;
+    color: black;
+    font-weight: 900;
+    font-family: "Fraunces";
+}
+
+
+.testimonial img, #openMenu:checked ~ .menu li:last-of-type a{
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
