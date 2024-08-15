@@ -234,6 +234,13 @@ h3{
     font-family: "Fraunces";
 }
 
+.images{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.images picture img{
+    height: 100%;
+}
 
 .testimonial img, #openMenu:checked ~ .menu li:last-of-type a{
     border-radius: 100px;
