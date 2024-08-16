@@ -116,6 +116,16 @@ h1{
 .importantInfoSection section{
     display: grid;
 }
+.importantInfoSection section:first-of-type picture{
+    background: url("../images/desktop/image-transform.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.importantInfoSection section:last-of-type picture{
+    background: url("../images/desktop/image-stand-out.jpg");
+    background-position: center;
+    background-size: cover;
+}
 .importantInfoSection .info{
     padding: 2em 1em;
     display: flex;
@@ -283,3 +293,23 @@ footer> ul{
 .attribution { font-size: 11px; text-align: center; position: fixed;
 bottom: 0; right: 0; left: 0; font-family: "Barlow"; backdrop-filter: blur(3px);}
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+@media only screen and (min-width:721px) {
+    picture :first-child{
+        display: block;
+    }
+    picture :last-child{
+        display: none;
+    }
+    .importantInfoSection section{
+        grid-template-columns: 1fr 1fr;
+    }
+    .importantInfoSection section:first-of-type picture{
+        grid-column: 2/3
+    }
+    .importantInfoSection section:first-of-type .info{
+        grid-row: 1/2;
+    }
+}
