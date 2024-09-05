@@ -15,6 +15,9 @@ body{
 img{
     max-width: 100%;
 }
+picture{
+    display: flex;
+}
 picture :first-child{
     display: none;
 }
@@ -127,7 +130,9 @@ h1{
     background-size: cover;
 }
 .importantInfoSection .info{
-    padding: 2em 1em;
+    aspect-ratio: 1/1;
+    font-size: 4.5vw;
+    padding: 3em 2em;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -166,6 +171,12 @@ h1{
     -ms-border-radius: 100px;
     -o-border-radius: 100px;
 }
+.importantInfoSection .info a:hover::after{
+    background-color: hsla(51, 100%, 49%);
+}
+.importantInfoSection section:nth-of-type(2) .info a:hover::after{
+    background-color: hsla(7, 99%, 70%);
+}
 .importantInfoSection section:nth-of-type(2) .info a::after{
     background-color: hsla(7, 99%, 70%, 0.25);
 }
@@ -173,25 +184,32 @@ h1{
 .aditionalInfo{
     display: grid;
 }
+.aditionalInfo picture{
+    display: flex;
+}
+.aditionalInfo picture img{
+    width: 100%;
+}
 .aditionalInfo section{
-    padding: 22em 1.5em 3em;
+    position: relative;
     text-align: center;
-    background: url("../images/mobile/image-graphic-design.jpg");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
     color: hsl(167, 40%, 24%);
 }
 .aditionalInfo > :last-child{
-    background: url("../images/mobile/image-photography.jpg");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
     color: hsl(198, 62%, 26%);
+}
+.aditionalInfo .textContainer{
+    position: absolute;
+    z-index: 2;
+    bottom: 15%;
+    left: 5%; right: 5%;
 }
 h3{
     font-weight: 900;
     font-size: 1.5em;
+}
+.aditionalInfo section p, h3{
+    left: 2.5em; right: 2.5em;
 }
 .aditionalInfo section p{
     margin: 1em 0;
@@ -218,6 +236,7 @@ h3{
     gap: 1.5em;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     text-align: center;
     font-family: "Barlow";
 }
@@ -277,9 +296,16 @@ footer aside ul a{
     font-weight: 600;
     color: hsl(167, 40%, 24%);
 }
+footer aside ul a:hover{
+    color: white;
+}
 footer> ul{
     margin-top: 2em;
     gap: 20px;
+}
+footer> ul a:hover{
+    filter: brightness(100);
+    -webkit-filter: brightness(100);
 }
 
 
@@ -303,13 +329,86 @@ bottom: 0; right: 0; left: 0; font-family: "Barlow"; backdrop-filter: blur(3px);
     picture :last-child{
         display: none;
     }
+    header{
+        text-shadow: 0 3px 5px black;
+    }
+    #logo{
+        filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+        -webkit-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+}
+    header aside{
+        display: flex;
+        align-items: center;
+    }
+    .menuButton{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        gap: 2rem;
+        font-size: .75em;
+    }
+    .menu a{
+        color: white;
+        font-family: "Barlow";
+    }
+    .menu li:last-of-type a{
+        text-shadow: none;
+    }
+    .menu li:last-of-type a{
+        color: hsl(212, 27%, 19%);
+        background-color: white;
+        font-family: "Fraunces";
+        font-weight: 700;
+        padding: 1em;
+        border-radius: 100px;
+
+        -webkit-border-radius: 100px;
+        -moz-border-radius: 100px;
+        -ms-border-radius: 100px;
+        -o-border-radius: 100px;
+    }
+    .menu li:last-of-type a:hover{
+        color: white;
+        background-color: hsla(0, 0%, 100%, 0.25);
+    }
+
     .importantInfoSection section{
         grid-template-columns: 1fr 1fr;
+    }
+    .importantInfoSection .info a{
+        align-self: flex-start;
+    }
+    .importantInfoSection .info{
+        padding: 20%;
+        font-size: 1.7vw;
+        text-align: left;
     }
     .importantInfoSection section:first-of-type picture{
         grid-column: 2/3
     }
     .importantInfoSection section:first-of-type .info{
         grid-row: 1/2;
+    }
+
+    .aditionalInfo{
+        grid-template-columns: 1fr 1fr;
+    }
+    .aditionalInfo .textContainer{
+        bottom: 0;
+        left: 10%; right: 10%;
+        top: 60%;
+        font-size: 2vw;
+    }
+}
+@media only screen and (min-width:1023px) {
+    .testimonials{
+        padding: 10% 5%;
+    }
+    .testimonials section{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .images{
+        grid-template-columns: repeat(4, 1fr);
     }
 }
