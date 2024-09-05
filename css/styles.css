@@ -109,7 +109,9 @@ h1{
     z-index: 1;
 }
 .title > img{
-    bottom: 30%;
+    width: 3%;
+    min-width: 25px;
+    bottom: 40%;
     position: absolute;
 }
 .title picture{
